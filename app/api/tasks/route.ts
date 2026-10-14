@@ -42,7 +42,7 @@ export async function POST(request: Request) {
     if (aiClient) {
       try {
         const aiResponse = await aiClient.models.generateContent({
-          model: 'gemini-2.5-flash',
+          model: 'gemini-3.8-flash',
           contents: `Write a short 2-sentence professional developer scope or summary for a project titled: "${title}" under the category: "${category}".`,
         });
         aiGeneratedText = aiResponse.text || "No response text from AI.";
